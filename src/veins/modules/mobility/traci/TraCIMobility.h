@@ -138,6 +138,12 @@ public:
         if (heading.isNan()) throw cRuntimeError("TraCIMobility::getHeading called with no heading set yet");
         return heading;
     }
+
+//    Akid
+    virtual const Coord& getPosition() const
+    {
+        return roadPosition;
+    }
     virtual TraCIScenarioManager* getManager() const
     {
         if (!manager) manager = TraCIScenarioManagerAccess().get();
